@@ -1,0 +1,70 @@
+.header {
+    position: fixed;
+    width: 100%;
+    top: 10;
+    z-index: 1000;
+    padding: 1rem 0;
+    margin: 0;
+  }
+  
+  .nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .logo-icon {
+    width: 2.5rem;    
+    height: 2.5rem;   
+    object-fit: contain;
+  }
+  
+  .logo-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: "Winky Sans", sans-serif;
+    font-optical-sizing:inherit;
+    font-weight: 500;
+    color: black;
+    letter-spacing:0.1em;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-links li {
+    display: inline-block;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    font-size: 1.25rem;
+    transition: color 0.3s ease;
+    color: black;
+    font-family: "Winky Sans", sans-serif;
+    font-optical-sizing:inherit;
+    font-weight: 500;
+    letter-spacing:0.1em;
+  }
+  
+  .nav-links a:hover {
+    color: #ffffff;
+  }
+  
+  .nav-links a:hover {
+    color:  #1097ff ;
+  }
