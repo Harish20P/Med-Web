@@ -1,8 +1,8 @@
 import React from 'react';
 import Header from '../components/Header';
 import HeroSection from '../components/HeroSection';
-import OurServices from '../components/OurServie';
-import MedicalStatistics from '../components/MedicalStatistics';
+import OurServices from '../components/OurService';
+import ContactPage from '../components/Contact';
 import "./HomePage.css"
 
 const Home = () => {
@@ -11,7 +11,7 @@ const Home = () => {
       <Header />
       <HeroSection />
       <OurServices />
-      <MedicalStatistics />
+      <ContactPage />
     </div>
   );
 };

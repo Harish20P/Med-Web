@@ -1,3 +1,4 @@
+// HeroSection.jsx
 import React from 'react';
 import './HeroSection.css';
 import heroImage from '../assets/hero-image.png';
@@ -7,7 +8,7 @@ const HeroSection = () => {
     <div className="hero-section">
       <div className="hero-section-inner">
         <div className="hero-content">
-          <h1 className="hero-title">Welcome to  SMTS <br />Med Code</h1>
+          <h1 className="hero-title">Welcome to SMTS <br />Med Code</h1>
           <p className="hero-description">
             Unlock the potential of your healthcare services with our specialized medical coding
             solutions. Our expert team ensures accurate coding, maximizes your revenue cycle, and
@@ -26,6 +27,9 @@ const HeroSection = () => {
             />
           </svg>
           <img src={heroImage} alt="Medical professional" className="hero-image" />
+          <div className="popup-message">
+            <span className="typewriter-text">Welcome to the World of Medical Coding</span>
+          </div>
         </div>
       </div>
     </div>

@@ -7,8 +7,8 @@ const Header = () => {
     <header className="header">
       <nav className="nav-container">
         <div className="logo-container">
-          <img src={logo} alt="Medi Code Logo" className="logo-icon" />
-          <span className="logo-text">MEDI CODE</span>
+          <img src={logo} alt="Med Code Logo" className="logo-icon" />
+          <span className="logo-text">MED CODE</span>
         </div>
         <ul className="nav-links">
           <li><a href="#hub">Hub</a></li>
