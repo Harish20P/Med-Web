@@ -1,0 +1,200 @@
+.welcome-section {
+  position: relative;
+  width: 100%;
+  height: 608px;
+  overflow: hidden;
+  background-image: url('../assets/Doctor1.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity:0;
+  z-index: 1;
+  transition: opacity 1.2s ease-in-out;
+}
+
+.welcome-section.image-loaded {
+  opacity: 1;
+}
+
+.welcome-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  z-index: 2;
+}
+
+.welcome-content {  
+  width: 50%;  
+  color: #ffffff;  
+  padding: 2rem;  
+  background: rgba(255, 255, 255, 0.1);   
+  border-radius: 15px;   
+  backdrop-filter: blur(5px);  
+  border: 1px solid rgba(255, 255, 255, 0.2);  
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.welcome-content.content-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.welcome-heading {
+  font-family: "Winky Sans", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.05em;
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.welcome-taglines {
+  margin-bottom: 2rem;
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.welcome-taglines p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+  font-weight: 300;
+}
+
+.discover-button {
+  font-family: "Winky sans", "sans-serif";
+  background-color: #1a3c5e;
+  color: #ffffff;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.5s ease-out, transform 0.6s ease-out, background-color 0.3s ease;
+}
+
+.element-visible {
+  opacity: 1 !important;
+  transform: translateX(0) !important;
+}
+
+.discover-button:hover {
+  background-color: #058f99;
+}
+
+@media screen and (max-width: 1024px) {
+  .welcome-container {
+    padding: 0 1.5rem;
+  }
+  
+  .welcome-content {
+    width: 60%;
+    padding: 1.8rem;
+  }
+  
+  .welcome-heading {
+    font-size: 2.2rem;
+  }
+  
+  .welcome-taglines p {
+    font-size: 1rem;
+  }
+}
+
+/* Tablet (768px) */
+@media screen and (max-width: 768px) {
+  .welcome-section {
+    height: 500px;
+    background-position: 30% bottom;
+  }
+  
+  .welcome-container {
+    padding: 0 1rem;
+  }
+  
+  .welcome-content {
+    width: 70%;
+    padding: 1.5rem;
+  }
+  
+  .welcome-heading {
+    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
+  }
+  
+  .welcome-taglines {
+    margin-bottom: 1.5rem;
+  }
+  
+  .welcome-taglines p {
+    font-size: 0.9rem;
+    margin-bottom: 0.4rem;
+  }
+  
+  .discover-button {
+    padding: 0.7rem 1.8rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile (480px) */
+@media screen and (max-width: 480px) {
+  .welcome-section {
+    height: 330px;
+    background-position: 40% bottom;
+  }
+  
+  .welcome-container {
+    padding: 0 0.8rem;
+    align-items: flex-start;
+    padding-top: 2rem;
+  }
+  
+  .welcome-content {
+    width: 100%;
+    padding: 1.2rem;
+  }
+  
+  .welcome-heading {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .welcome-taglines {
+    margin-bottom: 1.2rem;
+  }
+  
+  .welcome-taglines p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+  
+  .discover-button {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.85rem;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .welcome-section {
+    height: 360px;
+    background-position: 40% bottom;
+  }
+}
