@@ -9,11 +9,11 @@ const Welcome = () => {
   const [buttonVisible, setButtonVisible] = useState(false);
 
   useEffect(() => {
-    setTimeout(() => setImageLoaded(true), 800);
-    setTimeout(() => setContentVisible(true), 1000);
-    setTimeout(() => setHeadingVisible(true), 1300);
-    setTimeout(() => setTaglinesVisible(true), 1500);
-    setTimeout(() => setButtonVisible(true), 1800);
+    setTimeout(() => setImageLoaded(true), 500);
+    setTimeout(() => setContentVisible(true), 800);
+    setTimeout(() => setHeadingVisible(true), 1100);
+    setTimeout(() => setTaglinesVisible(true), 1400);
+    setTimeout(() => setButtonVisible(true), 1700);
     
     
   }, []);
