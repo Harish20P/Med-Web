@@ -93,6 +93,7 @@
 .element-visible {
   opacity: 1 !important;
   transform: translateX(0) !important;
+  font-family: "Winky Sans", sans-serif;
 }
 
 .discover-button:hover {

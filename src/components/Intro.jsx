@@ -14,12 +14,10 @@ const Intro = () => {
   });
 
   useEffect(() => {
-    // Background text animation (slide in from right)
     const backgroundTimer = setTimeout(() => {
       setBackgroundVisible(true);
     }, 1900);
 
-    // Content animations (sequential fade in)
     const headerTimer = setTimeout(() => {
       setContentVisible(prev => ({ ...prev, header: true }));
     }, 300);
