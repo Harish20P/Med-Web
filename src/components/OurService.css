@@ -9,6 +9,8 @@
 .services-header {
   text-align: center;
   margin-bottom: 3rem;
+  width: 100%;
+  max-width: 1200px;
 }
 
 .services-header h3 {
@@ -22,7 +24,7 @@
 .services-header h1 {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #1a365d;
+  color: rgb(26, 54, 93);
   line-height: 1.2;
 }
 
@@ -36,91 +38,123 @@
 
 .service-item {
   display: flex;
-  align-items: center;
   gap: 2rem;
-  background: white;
   padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  background: rgb(255, 255, 255,0.1);   
+  border-radius: 15px;   
+  backdrop-filter: blur(10px);  
+  width: 100%;
+  height: 350px;
+  overflow: hidden; 
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);  
+}
+
+/* Using direct layout control instead of flex-direction */
+.service-item-reverse {
+  display: flex;
+  flex-direction: row;
+}
+
+.service-item-reverse .service-icon-column {
+  order: 2;
+}
+
+.service-item-reverse .service-text {
+  order: 1;
+}
+
+.service-icon-column {
+  flex: 0 0 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  will-change: transform, opacity;
 }
 
 .service-icon-row {
   display: flex;
   align-items: center;
   gap: 1rem;
-  flex: 0 0 auto;
+  width: 100%;
 }
 
 .service-icon {
-  width: 80px;
-  height: 80px;
-  background: #e6f0fa;
+  width: 165px;
+  height: 210px;
   border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
+  background:rgb(75, 97, 128);     
+  border-radius: 15px;   
+  backdrop-filter: blur(10px);  
+  border: 1px solid rgba(98, 130, 255, 0.5);  
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
 .service-icon img {
-  width: 50px;
-  height: 50px;
+  width: 130px;
+  height: 130px;
   object-fit: contain;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.service-icon img:hover {
+  transform: scale(1.05);
 }
 
 .service-arrow {
-  font-size: 1.5rem;
-  color: #1a365d;
+  font-size: 3rem;
+  color: #154575;
+  margin-left: -20px;
+  margin-right: -20px;
 }
 
 .service-text {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  will-change: transform, opacity;
 }
 
 .service-text h2 {
   font-size: 1.8rem;
   font-weight: 600;
   color: #1a365d;
-  margin-bottom: 1rem;
 }
 
 .service-text p {
   font-size: 1rem;
   line-height: 1.6;
   color: #333;
-  margin-bottom: 1rem;
 }
 
-/* Animations */
+/* Enhanced animations with directional slides */
 .hidden {
   opacity: 0;
+  visibility: hidden;
+}
+
+.animated .slide-from-left {
+  animation: slideFromLeft 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  visibility: visible;
+}
+
+.animated .slide-from-right {
+  animation: slideFromRight 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  visibility: visible;
 }
 
 .fade-in {
   animation: fadeIn 0.8s ease forwards;
+  visibility: visible;
 }
 
-.hidden-left {
-  opacity: 0;
-  transform: translateX(-30px);
-}
-
-.slide-in-left {
-  animation: slideInLeft 0.8s ease forwards;
-}
-
-@keyframes fadeIn {
+@keyframes slideFromLeft {
   from {
     opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes slideInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-30px);
+    transform: translateX(-50px);
   }
   to {
     opacity: 1;
@@ -128,37 +162,61 @@
   }
 }
 
-/* Responsive Design */
+@keyframes slideFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { 
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Media queries for responsive design */
 @media (max-width: 1024px) {
   .our-services-container {
     padding: 3rem 1.5rem;
   }
-
+  
   .services-header h1 {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
 
-  .service-item {
+  .service-item,
+  .service-item-reverse {
     padding: 1.5rem;
     gap: 1.5rem;
   }
-
+  
   .service-icon {
-    width: 70px;
-    height: 70px;
+    width: 130px;
+    height: 160px;
+    margin-top: 10px;
+  }
+
+  .service-icon-column{
+    align-items:start;
   }
 
   .service-icon img {
-    width: 45px;
-    height: 45px;
+    width: 90px;
+    height: 90px;
   }
 
   .service-text h2 {
     font-size: 1.6rem;
-  }
-
-  .service-text p {
-    font-size: 0.95rem;
   }
 }
 
@@ -171,38 +229,52 @@
     font-size: 1.8rem;
   }
 
-  .service-item {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 1rem;
+  .service-item,
+  .service-item-reverse {
+    flex-direction: column !important; /* Override any previous flex direction */
+    padding: 1.5rem;
+    gap: 1.5rem;
+    height: max-content;
   }
 
-  .service-icon-row {
-    justify-content: center;
+  .service-item-reverse{
+    flex-direction: row-reverse;
+  }
+  /* Reset ordering for mobile layout */
+  .service-item-reverse .service-icon-column,
+  .service-item-reverse .service-text,
+  .service-item .service-icon-column,
+  .service-item .service-text {
+    order: initial;
+  }
+  
+  .service-icon-column {
     width: 100%;
     margin-bottom: 1rem;
   }
+  
+  /* Adjust animations for mobile */
+  .animated .slide-from-left,
+  .animated .slide-from-right {
+    animation: fadeIn 0.8s ease forwards;
+  }
 
   .service-icon {
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
   }
 
   .service-icon img {
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
   }
-
-  .service-text h2 {
-    font-size: 1.4rem;
-  }
-
-  .service-text p {
-    font-size: 0.9rem;
+  
+  .service-icon-row {
+    justify-content: center;
   }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 480px) {
   .our-services-container {
     padding: 1.5rem 0.5rem;
   }
@@ -215,18 +287,20 @@
     font-size: 1.5rem;
   }
 
-  .service-icon-row {
-    gap: 0.5rem;
+  .service-item,
+  .service-item-reverse {
+    padding: 1rem;
+    gap: 1rem;
   }
 
   .service-icon {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
   }
 
   .service-icon img {
-    width: 35px;
-    height: 35px;
+    width: 45px;
+    height: 45px;
   }
 
   .service-arrow {
@@ -239,5 +313,19 @@
 
   .service-text p {
     font-size: 0.85rem;
+  }
+  
+  .service-icon-row {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/* Accessibility considerations */
+@media (prefers-reduced-motion: reduce) {
+  .animated .slide-from-left,
+  .animated .slide-from-right,
+  .fade-in {
+    animation-duration: 0.1s;
   }
 }

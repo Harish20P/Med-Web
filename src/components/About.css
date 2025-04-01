@@ -1,4 +1,4 @@
-.about-us-container {
+  .about-us-container {
     padding: 4rem 2rem;
     font-family: "Winky Sans", sans-serif;
     color: white;
@@ -8,49 +8,58 @@
     background-image: url('../assets/counter.jpg');
     background-size: cover;
     text-align: justify;
-    background-blend-mode: overlay;
+    background-blend-mode:darken;
+    will-change: opacity; 
   }
-  
+
   .about-us-content {
     max-width: 1200px;
     margin: 0 auto;
     width: 100%;
+    background: rgba(255, 255, 255, 0.1);   
+    border-radius: 15px;   
+    backdrop-filter: blur(25px);  
+    border: 1px solid rgba(255, 255, 255, 0.2);  
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    padding: 1rem;
   }
-  
+
   .about-header {
     margin-bottom: 2rem;
+    will-change: transform, opacity; 
   }
-  
+
   .about-header h3 {
     font-size: 1.1rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
     letter-spacing: 1px;
   }
-  
+
   .about-header h2 {
     font-size: 2.5rem;
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: 1.5rem;
   }
-  
+
   .about-description-container {
     display: flex;
     justify-content: space-between;
     gap: 2rem;
     margin-bottom: 2rem;
+    will-change: transform, opacity; 
   }
-  
+
   .about-description-column {
     flex: 1;
   }
-  
+
   .about-description-column p {
     line-height: 1.6;
     font-size: 1.1rem;
   }
-  
+
   .counters-section {
     display: flex;
     justify-content: space-between;
@@ -60,27 +69,28 @@
     max-width: 1200px;
     font-family: "Cambria", sans-serif;
   }
-  
+
   .counter-item {
     flex: 1;
     min-width: 200px;
-    background: rgba(255, 255, 255, 0.1);   
+    background: rgba(200, 226, 255, 0.1);   
     border-radius: 15px;   
     backdrop-filter: blur(10px);  
     border: 1px solid rgba(255, 255, 255, 0.2);  
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
     opacity: 0.9;
-    margin: 1rem;
+    margin: 0.2rem;
     padding: 2rem;
     border-radius: 10px;
     text-align: center;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    will-change: transform, opacity; 
   }
-  
+
   .counter-item:hover {
     transform: translateY(-5px);
   }
-  
+
   .counter-icon {
     width: 100px;
     height: 100px;
@@ -90,43 +100,48 @@
     justify-content: center;
     margin: 0 auto 1.5rem;
   }
-  
+
   .counter-icon img {
     width: 70px;
     height: 70px;
     object-fit: contain;
+    transition: all 0.2s ease; 
   }
-  
+
   .counter-value {
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
   }
-  
+
   .counter-label {
     font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: 500;
   }
-  
+
   .hidden-left {
     opacity: 0;
     transform: translateX(-50px);
+    visibility: hidden; 
   }
-  
+
   .slide-in-left {
-    animation: slideInLeft 0.8s ease forwards;
+    animation: slideInLeft 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards; 
+    visibility: visible;
   }
-  
+
   .hidden-fade {
     opacity: 0;
+    visibility: hidden;
   }
-  
+
   .fade-in {
-    animation: fadeIn 0.8s ease forwards;
+    animation: fadeIn 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards; 
+    visibility: visible;
   }
-  
+
   @keyframes slideInLeft {
     from {
       opacity: 0;
@@ -137,13 +152,29 @@
       transform: translateX(0);
     }
   }
-  
+
   @keyframes fadeIn {
     from {
       opacity: 0;
+      transform: translateY(10px); 
     }
     to {
       opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .slide-in-left, .fade-in {
+      animation-duration: 0.1s;
+    }
+    
+    .counter-item {
+      transition: opacity 0.1s;
+    }
+    
+    .counter-item:hover {
+      transform: none;
     }
   }
   

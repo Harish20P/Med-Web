@@ -4,6 +4,7 @@ import Welcome from '../components/Welcome';
 import Intro from '../components/Intro';
 import AboutUs from '../components/About';
 import OurServices from '../components/OurService';
+import Needs from '../components/Needs';
 import "./HomePage.css"
 
 const Home = () => {
@@ -14,6 +15,7 @@ const Home = () => {
       <Intro />
       <AboutUs />
       <OurServices />
+      <Needs />
     </div>
   );
 };

@@ -24,42 +24,45 @@ const AboutUs = () => {
     availability: false
   });
   
-  const [isVisible, setIsVisible] = useState(false);
   const [headerVisible, setHeaderVisible] = useState(false);
   const [descriptionVisible, setDescriptionVisible] = useState(false);
   const [counterVisible, setCounterVisible] = useState([false, false, false, false]);
   
   const sectionRef = useRef(null);
+  const animationTriggered = useRef(false);
   
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
-      if (entries[0].isIntersecting) {
-        setIsVisible(true);
-        observer.disconnect();
+      if (entries[0].isIntersecting && !animationTriggered.current) {
+        animationTriggered.current = true;
         
         setHeaderVisible(true);
-        
+
         setTimeout(() => {
           setDescriptionVisible(true);
-        }, 500);
-        
+        }, 400);
+
         setTimeout(() => {
           setCounterVisible(prev => [true, prev[1], prev[2], prev[3]]);
-        }, 1000);
+          startCounterAnimation();
+        }, 800);
         
         setTimeout(() => {
           setCounterVisible(prev => [prev[0], true, prev[2], prev[3]]);
-        }, 1300);
+        }, 1000);
         
         setTimeout(() => {
           setCounterVisible(prev => [prev[0], prev[1], true, prev[3]]);
-        }, 1700);
+        }, 1200);
         
         setTimeout(() => {
           setCounterVisible(prev => [prev[0], prev[1], prev[2], true]);
-        }, 2000);
+        }, 1400);
       }
-    }, { threshold: 0.2 });
+    }, { 
+      threshold: 0.25,
+      rootMargin: '0px 0px -100px 0px' 
+    });
     
     if (sectionRef.current) {
       observer.observe(sectionRef.current);
@@ -67,41 +70,40 @@ const AboutUs = () => {
     
     return () => observer.disconnect();
   }, []);
-  
-  useEffect(() => {
-    if (isVisible) {
-      const duration = 5000;
-      const interval = 50;
+
+  const startCounterAnimation = () => {
+    const startTime = Date.now();
+    const duration = 2000; 
+    
+    const finalValues = {
+      cost: 50,
+      consistency: 99,
+      meeting: 100,
+      availability: 100
+    };
+    
+    const animate = () => {
+      const currentTime = Date.now();
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
       
-      const incrementCounters = () => {
-        setCounters(prevCounters => ({
-          cost: prevCounters.cost < 50 ? prevCounters.cost + 1 : 50,
-          consistency: prevCounters.consistency < 99 ? prevCounters.consistency + 2 : 99,
-          meeting: prevCounters.meeting < 100 ? prevCounters.meeting + 2 : 100,
-          availability: prevCounters.availability < 100 ? prevCounters.availability + 2 : 100
-        }));
-      };
+      const easeOut = (t) => 1 - Math.pow(1 - t, 3);
+      const easedProgress = easeOut(progress);
       
-      const timer = setInterval(() => {
-        incrementCounters();
-      }, interval);
+      setCounters({
+        cost: Math.round(easedProgress * finalValues.cost),
+        consistency: Math.round(easedProgress * finalValues.consistency),
+        meeting: Math.round(easedProgress * finalValues.meeting),
+        availability: Math.round(easedProgress * finalValues.availability)
+      });
       
-      const timeout = setTimeout(() => {
-        clearInterval(timer);
-        setCounters({
-          cost: 50,
-          consistency: 99,
-          meeting: 100,
-          availability: 100
-        });
-      }, duration);
-      
-      return () => {
-        clearInterval(timer);
-        clearTimeout(timeout);
-      };
-    }
-  }, [isVisible]);
+      if (progress < 1) {
+        requestAnimationFrame(animate);
+      }
+    };
+    
+    requestAnimationFrame(animate);
+  };
   
   const handleMouseEnter = (iconName) => {
     setHoverStates(prev => ({
@@ -125,7 +127,7 @@ const AboutUs = () => {
           <h2>Let us do the work, so you can focus <br /> on what matters.</h2>
         </div>
         
-        <div className={`about-description-container ${descriptionVisible ? 'slide-in-left' : 'hidden-fade'}`}>
+        <div className={`about-description-container ${descriptionVisible ? 'slide-in-left' : 'hidden-left'}`}>
           <div className="about-description-column">
             <p>
               With strong focus on ethics, data security and transparency, we drive operational excellence and continual improvement plans. Headquartered with a wealth of offerings, we are a progressive company that can easily bridge any offshore gaps in a globalized world.
