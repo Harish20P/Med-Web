@@ -15,9 +15,9 @@ const Header = () => {
       <nav className="nav-container">
         <div className="logo-container">
           <div className="logo-text-container">
-            <span className="logo-text-med">MED</span>
+            <span className="logo-text-med">E HEALTH</span>
             <img src={logo} alt="Logo" className="logo" />
-            <span className="logo-text-code">CODE</span>
+            <span className="logo-text-code">CARE</span>
           </div>
         </div>
 
@@ -47,7 +47,7 @@ const Header = () => {
                 <li><a href="#radv">RADV AUDIT SERVICES</a></li>
               </ul>
             </li>
-            <li><a href="#why">WHY MEDCODE</a></li>
+            <li><a href="#why">WHY E-HEALTH CARE</a></li>
             <li><a href="#compliance">COMPLIANCE</a></li>
             <li><a href="#careers">CAREERS</a></li>
             <li><a href="#contact">CONTACT US</a></li>

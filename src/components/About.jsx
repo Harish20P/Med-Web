@@ -123,7 +123,7 @@ const AboutUs = () => {
     <div className="about-us-container" ref={sectionRef}>
       <div className="about-us-content">
         <div className={`about-header ${headerVisible ? 'slide-in-left' : 'hidden-left'}`}>
-          <h3>MEDCODE AT GLANCE</h3>
+          <h3>E-HEALTH CARE AT GLANCE</h3>
           <h2>Let us do the work, so you can focus <br /> on what matters.</h2>
         </div>
         

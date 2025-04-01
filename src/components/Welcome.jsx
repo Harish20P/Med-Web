@@ -23,12 +23,12 @@ const Welcome = () => {
       <div className="welcome-container">
         <div className={`welcome-content ${contentVisible ? "content-visible" : ""}`}>
           <h1 className={`welcome-heading ${headingVisible ? "element-visible" : ""}`}>
-            A TRUSTED PARTNER<br /> FOR YOUR <br /> RISK ADJUSTMENT SOLUTIONS
+           A STRATEGIC PARTNER <br />IN RISK ADJUSTMENT EXCELLENCE 
           </h1>
           <div className={`welcome-taglines ${taglinesVisible ? "element-visible" : ""}`}>
-            <p>Our performance is your success.</p>
-            <p>Our passion is innovation.</p>
-            <p>Our expertise is unmatched. We get you more.</p>
+            <p>Our performance ensures your success.</p>
+            <p>Our innovation transforms industry standards.</p>
+            <p>Our expertise stands unrivaled. We maximize your outcomes.</p>
           </div>
           <button className={`discover-button ${buttonVisible ? "element-visible" : ""}`}>
             Discover more

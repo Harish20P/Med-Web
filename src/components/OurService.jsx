@@ -153,10 +153,10 @@ const OurServices = () => {
           <div className="service-text slide-from-right">
             <h2>RISK ADJUSTMENT CODING</h2>
             <p>
-              We carry end-to-end expertise in risk adjustment coding and are specialists in the same. Our actions bring total transparency to operations and track the progress and provide detailed reporting and visibility at all touchpoints. MEDCODE offers world-class coding services and our proud to have some of the best resources in the industry on our rolls.
+              We carry end-to-end expertise in risk adjustment coding and are specialists in the same. Our actions bring total transparency to operations and provide detailed reporting and visibility. E-Health Care offers world-class coding services and has some of the best resources in the industry.
             </p>
             <p>
-              Additionally, we are capable of undertaking risk-adjustment audits, including chart reviews, audits of documentation and medical records etc. We work closely with customers to understand the requirements in detail, come up with proactive suggestions and solutions and create personalized risk adjustment HCC coding solutions to share success.
+              Additionally, we are capable of undertaking risk-adjustment audits, including chart reviews, audits of medical records etc. We work closely with customers to understand the requirements in detail, come up with proactive suggestions and create personalized risk adjustment HCC coding solutions.
             </p>
           </div>
         </div>
@@ -169,7 +169,7 @@ const OurServices = () => {
           <div className="service-text slide-from-left">
             <h2>HEDIS ABSTRACTION</h2>
             <p>
-              MEDCODE brings unmatched expertise to HEDIS support, and our personnel can abstract, analyze and report accurately on all HEDIS measures as per the relevant NCQA technical specifications. We can thus enhance the quality and star ratings for customers and deliver value to clients. Our HEDIS abstractors have expertise in all measures and a strong background in clinical knowledge.
+              E-Health Care brings unmatched expertise to HEDIS support, and our personnel can abstract, analyze and report accurately on all HEDIS measures as per the relevant NCQA technical specifications. We can thus enhance the quality and star ratings for customers and deliver value to clients. Our HEDIS abstractors have expertise in all measures and a strong background in clinical knowledge.
             </p>
             <p>
               By close monitoring and closing of real-time gaps, we ensure high compliance and improvement in the effectiveness of interventions and clinical care.
@@ -253,7 +253,7 @@ const OurServices = () => {
           <div className="service-text slide-from-right">
             <h2>EXTERNAL QUALITY REVIEW</h2>
             <p>
-              MEDCODE conducts external quality review activities that help determine the missed opportunities. We also risk recommendations regarding the correct codes to submit for better risk scores. We undertake this activity by adhering to the documentation and Medicare guidelines as appropriate.
+              E-Health Care conducts external quality review activities that help determine the missed opportunities. We also risk recommendations regarding the correct codes to submit for better risk scores. We undertake this activity by adhering to the documentation and Medicare guidelines as appropriate.
             </p>
           </div>
         </div>
