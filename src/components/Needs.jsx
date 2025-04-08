@@ -39,7 +39,7 @@ const Needs = () => {
               Your Partner in Recovering Lost Revenues
             </h2>
             <p className="needs-description">
-              MEDCODE has helped many Healthcare businesses to be successful with their medical coding needs.
+              E-Health Care has helped many Healthcare businesses to be successful with their medical coding needs.
             </p>
           </div>
           

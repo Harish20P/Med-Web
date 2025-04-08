@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 .welcome-section {
   position: relative;
   width: 100%;
@@ -33,8 +36,8 @@
   padding: 2rem;  
   background: rgba(255, 255, 255, 0.1);   
   border-radius: 15px;   
-  backdrop-filter: blur(5px);  
-  border: 1px solid rgba(255, 255, 255, 0.2);  
+  backdrop-filter: blur(3px);  
+  border: 1px solid rgba(255, 255, 255, 0.149);  
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
   opacity: 0;
   transform: translateX(-50px);
@@ -47,18 +50,18 @@
 }
 
 .welcome-heading {
-  font-family: "Winky Sans", sans-serif;
-  font-size: 2.5rem;
-  font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 1.5rem;
-  letter-spacing: 0.05em;
+  font-family: "Sarabun", sans-serif;
+  font-size: 38px;
+  font-weight: 600;
+  line-height: 1.2em;
+  margin-bottom: 1rem;
   opacity: 0;
   transform: translateX(-30px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 .welcome-taglines {
+  font-family: "Poppins", sans-serif;
   margin-bottom: 2rem;
   opacity: 0;
   transform: translateX(-30px);
@@ -66,14 +69,14 @@
 }
 
 .welcome-taglines p {
-  font-size: 1.1rem;
-  line-height: 1.6;
+  font-size: 1rem;
+  line-height: 1.3em;
   margin-bottom: 0.5rem;
   font-weight: 300;
 }
 
 .discover-button {
-  font-family: "Winky sans", "sans-serif";
+  font-family: "Poppins", "sans-serif";
   background-color: #1a3c5e;
   color: #ffffff;
   border: none;
@@ -92,7 +95,7 @@
 .element-visible {
   opacity: 1 !important;
   transform: translateX(0) !important;
-  font-family: "Winky Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .discover-button:hover {

@@ -77,7 +77,7 @@ const Intro = () => {
           className={`background-text ${backgroundVisible ? 'visible' : ''}`} 
           ref={backgroundTextRef}
         >
-          MED CODE
+          E-HEALTH CARE
         </div>
         <div className="intro-content">
           <div 
@@ -96,7 +96,7 @@ const Intro = () => {
             className={`intro-paragraph ${contentVisible.paragraph1 ? 'visible' : ''}`}
             style={{ transitionDelay: '2.4s' }}
           >
-            MEDCODE is a dynamic organization of professionals delivering superlative services and powerful transformations in medical coding for
+            E-Health Care is a dynamic organization of professionals delivering superlative services and powerful transformations in medical coding for
             the healthcare industry. Specializing in Risk Adjustment coding, we deliver holistic solutions that embody quality, security and excellence
             at every touchpoint.
           </p>

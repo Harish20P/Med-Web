@@ -5,6 +5,8 @@ import Intro from '../components/Intro';
 import AboutUs from '../components/About';
 import OurServices from '../components/OurService';
 import Needs from '../components/Needs';
+import WhyChooseUs from '../components/WhyChooseUs';
+import Contact from '../components/Contact';
 import "./HomePage.css"
 
 const Home = () => {
@@ -16,6 +18,8 @@ const Home = () => {
       <AboutUs />
       <OurServices />
       <Needs />
+      <WhyChooseUs />
+      <Contact />
     </div>
   );
 };
