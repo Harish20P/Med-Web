@@ -10,7 +10,6 @@ const Contact = () => {
     name: '',
     phone: '',
     email: '',
-    to_email: '',
     services: 'Risk Adjustment Coding',
     message: '',
   });
@@ -55,7 +54,6 @@ const Contact = () => {
       name: formData.name,
       phone: formData.phone,
       email: formData.email,
-      to_email: formData.to_email,
       services: formData.services,
       message: formData.message
     };
@@ -74,7 +72,6 @@ const Contact = () => {
             name: '',
             phone: '',
             email: '',
-            to_email: '',
             services: 'Risk Adjustment Coding',
             message: '',
           });
@@ -180,21 +177,6 @@ const Contact = () => {
                 name="email"
                 className="form-control"
                 value={formData.email}
-                onChange={handleChange}
-                required
-              />
-            </div>
-
-            <div className="form-group">
-              <label htmlFor="to_email">
-                Recipient Email <span className="required">*</span>
-              </label>
-              <input
-                type="email"
-                id="to_email"
-                name="to_email"
-                className="form-control"
-                value={formData.to_email}
                 onChange={handleChange}
                 required
               />
