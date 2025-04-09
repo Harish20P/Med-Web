@@ -101,7 +101,7 @@ const OurServices = () => {
   }, []);
 
   return (
-    <div className="our-services-container">
+    <div className="our-services-container" id="services">
       <div 
         className={`services-header ${visibleSections.header ? 'fade-in' : 'hidden'}`}
         ref={sectionRefs.header}
@@ -150,7 +150,7 @@ const OurServices = () => {
               </div>
             </div>
           </div>
-          <div className="service-text slide-from-right">
+          <div className="service-text slide-from-right" id="risk-adjustment">
             <h2>RISK ADJUSTMENT CODING</h2>
             <p>
               We carry end-to-end expertise in risk adjustment coding and are specialists in the same. Our actions bring total transparency to operations and provide detailed reporting and visibility. E-Health Care offers world-class coding services and has some of the best resources in the industry.
@@ -166,7 +166,7 @@ const OurServices = () => {
           className={`service-item service-item-reverse ${visibleSections.hedis ? 'animated' : 'hidden'}`}
           ref={sectionRefs.hedis}
         >
-          <div className="service-text slide-from-left">
+          <div className="service-text slide-from-left" id="hedis">
             <h2>HEDIS ABSTRACTION</h2>
             <p>
               E-Health Care brings unmatched expertise to HEDIS support, and our personnel can abstract, analyze and report accurately on all HEDIS measures as per the relevant NCQA technical specifications. We can thus enhance the quality and star ratings for customers and deliver value to clients. Our HEDIS abstractors have expertise in all measures and a strong background in clinical knowledge.
@@ -250,7 +250,7 @@ const OurServices = () => {
               </div>
             </div>
           </div>
-          <div className="service-text slide-from-right">
+          <div className="service-text slide-from-right" id="quality-review">
             <h2>EXTERNAL QUALITY REVIEW</h2>
             <p>
               E-Health Care conducts external quality review activities that help determine the missed opportunities. We also risk recommendations regarding the correct codes to submit for better risk scores. We undertake this activity by adhering to the documentation and Medicare guidelines as appropriate.
@@ -263,7 +263,7 @@ const OurServices = () => {
           className={`service-item service-item-reverse ${visibleSections.radv ? 'animated' : 'hidden'}`}
           ref={sectionRefs.radv}
         >
-          <div className="service-text slide-from-left">
+          <div className="service-text slide-from-left" id="radv">
             <h2>RADV AUDIT SERVICES</h2>
             <p>
               Our RADV audit services offer key insights and help prepare for the RADV audits. We can assist with the review of medical records submitted with high volumes and also check whether the right ICD 10 codes are assigned. With tight deadlines, we empower customers and prime them for success.

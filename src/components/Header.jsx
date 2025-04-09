@@ -48,12 +48,10 @@ const Header = () => {
               </ul>
             </li>
             <li><a href="#why">WHY E-HEALTH CARE</a></li>
-            <li><a href="#compliance">COMPLIANCE</a></li>
-            <li><a href="#careers">CAREERS</a></li>
             <li><a href="#contact">CONTACT US</a></li>
           </ul>
 
-          <button className="get-started-btn">Get Started</button>
+          <a href="#contact" className="get-started-btn">Get Started</a>
         </div>
         
         <div className="menu-icon" onClick={toggleMenu}>

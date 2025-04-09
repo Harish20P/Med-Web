@@ -14,8 +14,6 @@ const Welcome = () => {
     setTimeout(() => setHeadingVisible(true), 1100);
     setTimeout(() => setTaglinesVisible(true), 1400);
     setTimeout(() => setButtonVisible(true), 1700);
-    
-    
   }, []);
 
   return (
@@ -23,16 +21,19 @@ const Welcome = () => {
       <div className="welcome-container">
         <div className={`welcome-content ${contentVisible ? "content-visible" : ""}`}>
           <h1 className={`welcome-heading ${headingVisible ? "element-visible" : ""}`}>
-           A STRATEGIC PARTNER <br />IN RISK ADJUSTMENT EXCELLENCE 
+            A STRATEGIC PARTNER <br />IN RISK ADJUSTMENT EXCELLENCE
           </h1>
           <div className={`welcome-taglines ${taglinesVisible ? "element-visible" : ""}`}>
             <p>Our performance ensures your success.</p>
             <p>Our innovation transforms industry standards.</p>
             <p>Our expertise stands unrivaled. We maximize your outcomes.</p>
           </div>
-          <button className={`discover-button ${buttonVisible ? "element-visible" : ""}`}>
+          <a
+            href="#services"
+            className={`discover-button ${buttonVisible ? "element-visible" : ""}`}
+          >
             Discover more
-          </button>
+          </a>
         </div>
       </div>
     </section>

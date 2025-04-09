@@ -90,7 +90,7 @@ const WhyChooseUs = () => {
   ];
 
   return (
-    <section className="why-choose-us" ref={sectionRef}>
+    <section className="why-choose-us" id="why" ref={sectionRef}>
       <div className="container">
         <h2 className="section-title">WHY E-HEALTH CARE?</h2>
         <div className="features-container">
@@ -124,7 +124,7 @@ const WhyChooseUs = () => {
           </div>
         </div>
         <div className="button-container">
-          <button className="learn-more-btn">Learn More</button>
+          <a href="#contact" className="learn-more-btn">Learn More</a>
         </div>
       </div>
     </section>

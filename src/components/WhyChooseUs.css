@@ -89,6 +89,7 @@
   cursor: pointer;
   transition: background-color 0.3s ease;
   box-shadow: 0 4px 6px rgba(43, 108, 176, 0.2);
+  text-decoration: none;
 }
 
 .learn-more-btn:hover {

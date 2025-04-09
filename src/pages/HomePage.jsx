@@ -7,19 +7,19 @@ import OurServices from '../components/OurService';
 import Needs from '../components/Needs';
 import WhyChooseUs from '../components/WhyChooseUs';
 import Contact from '../components/Contact';
-import "./HomePage.css"
+import "./HomePage.css";
 
 const Home = () => {
   return (
     <div className='home-container'>
       <Header />
-      <Welcome />
-      <Intro />
-      <AboutUs />
-      <OurServices />
-      <Needs />
-      <WhyChooseUs />
-      <Contact />
+      <Welcome /> 
+      <Intro /> 
+      <AboutUs /> 
+      <OurServices /> 
+      <Needs /> 
+      <WhyChooseUs/> 
+      <Contact id="contact" />
     </div>
   );
 };

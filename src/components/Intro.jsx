@@ -110,12 +110,13 @@ const Intro = () => {
             Medicare, Medicaid, and Commercial Insurance, we have the experts and expertise to undertake transitions and launch operations of any
             scale successfully.
           </p>
-          <button 
+          <a 
+            href="#services"
             className={`intro-button ${contentVisible.button ? 'visible' : ''}`}
             style={{ transitionDelay: '2.8s' }}
           >
             Learn more
-          </button>
+          </a>
         </div>
       </div>
     </div>

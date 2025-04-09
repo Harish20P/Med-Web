@@ -116,6 +116,7 @@
   transform: translateY(20px);
   transition: all 0.3s ease;
   font-family: "GeneralSansMedium", sans-serif;
+  text-decoration: none;
 }
 
 .intro-button.visible {

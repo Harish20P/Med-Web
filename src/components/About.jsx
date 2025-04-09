@@ -120,7 +120,7 @@ const AboutUs = () => {
   };
   
   return (
-    <div className="about-us-container" ref={sectionRef}>
+    <div className="about-us-container" id="about" ref={sectionRef}>
       <div className="about-us-content">
         <div className={`about-header ${headerVisible ? 'slide-in-left' : 'hidden-left'}`}>
           <h3>E-HEALTH CARE AT GLANCE</h3>

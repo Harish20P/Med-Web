@@ -69,6 +69,7 @@
     cursor: pointer;
     transition: background-color 0.3s ease;
     transition: opacity 0.5s ease-out, transform 1s ease-out, background-color 0.3s ease;
+    text-decoration: none;
   }
 
   .needs-button:hover {

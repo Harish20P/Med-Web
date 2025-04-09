@@ -44,9 +44,9 @@ const Needs = () => {
           </div>
           
           <div className="needs-right">
-            <button className="needs-button">
+            <a href="#contact" className="needs-button">
               <span>Discover more</span>
-            </button>
+            </a>
           </div>
         </div>
       </div>

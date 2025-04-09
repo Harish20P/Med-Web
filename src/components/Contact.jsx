@@ -85,7 +85,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="contact-section" ref={sectionRef}>
+    <section className="contact-section" id="contact" ref={sectionRef}>
       <div className="contact-container">
         <div className={`contact-info ${isVisible ? 'fade-in' : ''}`}>
           <h3 className="contact-heading">CONTACT US</h3>
