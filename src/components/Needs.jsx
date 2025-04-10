@@ -36,16 +36,16 @@ const Needs = () => {
         <div className="needs-content">
           <div className="needs-left">
             <h2 className="needs-title">
-              Your Partner in Recovering Lost Revenues
+              Your Ally in Reclaiming Lost Profits
             </h2>
             <p className="needs-description">
-              E-Health Care has helped many Healthcare businesses to be successful with their medical coding needs.
+              E-Health Care has supported numerous healthcare companies in achieving success with their medical coding requirements.
             </p>
           </div>
           
           <div className="needs-right">
             <a href="#contact" className="needs-button">
-              <span>Discover more</span>
+              <span>Learn more</span>
             </a>
           </div>
         </div>

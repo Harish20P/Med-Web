@@ -67,7 +67,7 @@ const Contact = () => {
       )
       .then(
         (result) => {
-          setSubmitStatus('Email sent successfully!');
+          setSubmitStatus('Message delivered successfully!');
           setFormData({
             name: '',
             phone: '',
@@ -78,7 +78,7 @@ const Contact = () => {
           setIsSubmitting(false);
         },
         (error) => {
-          setSubmitStatus('Failed to send email. Please try again.');
+          setSubmitStatus('Unable to send message. Please retry.');
           setIsSubmitting(false);
         }
       );
@@ -88,9 +88,9 @@ const Contact = () => {
     <section className="contact-section" id="contact" ref={sectionRef}>
       <div className="contact-container">
         <div className={`contact-info ${isVisible ? 'fade-in' : ''}`}>
-          <h3 className="contact-heading">CONTACT US</h3>
+          <h3 className="contact-heading">GET IN TOUCH</h3>
           <h2 className="contact-subheading">
-            We would love to hear from you and be of service to you.
+            We’re eager to connect with you and assist you.
           </h2>
           <div className="contact-divider"></div>
           
@@ -98,7 +98,7 @@ const Contact = () => {
             <div className="location">
               <h4>CHENNAI</h4>
               <p>
-                RMZ Software Park,Pvt Ltd. Campus10 4th Floor; Unit No.401
+                RMZ Software Park, Pvt Ltd. Campus10, 4th Floor, Unit No.401
                 <br />
                 <span className="location-icon">
                   <i className="fas fa-map-marker-alt"></i>
@@ -124,14 +124,14 @@ const Contact = () => {
             <div className="location">
               <h4>HYDERABAD</h4>
               <p>
-                3rd floor, Dallas Center, Survey No. 83/1, Hyderabad
+                3rd Floor, Dallas Center, Survey No. 83/1, Hyderabad
                 <br />
                 <span className="location-icon">
                   <i className="fas fa-map-marker-alt"></i>
                 </span>
                 Knowledge City, Raidurg (Panmaktha), Serilingampally,
                 <br />
-                Hyderabad, Rangareddi District,Telangana – 500081.
+                Hyderabad, Rangareddi District, Telangana – 500081.
               </p>
             </div>
           </div>
@@ -141,7 +141,7 @@ const Contact = () => {
           <form ref={formRef} onSubmit={handleSubmit}>
             <div className="form-row">
               <div className="form-group">
-                <label htmlFor="name">Name</label>
+                <label htmlFor="name">Full Name</label>
                 <input
                   type="text"
                   id="name"
@@ -153,7 +153,7 @@ const Contact = () => {
               </div>
               <div className="form-group">
                 <label htmlFor="phone">
-                  Phone <span className="required">*</span>
+                  Contact Number <span className="required">*</span>
                 </label>
                 <input
                   type="tel"
@@ -169,7 +169,7 @@ const Contact = () => {
 
             <div className="form-group">
               <label htmlFor="email">
-                Your Email <span className="required">*</span>
+                Email Address <span className="required">*</span>
               </label>
               <input
                 type="email"
@@ -184,7 +184,7 @@ const Contact = () => {
 
             <div className="form-group">
               <label htmlFor="services">
-                Choose Services <span className="required">*</span>
+                Select Service <span className="required">*</span>
               </label>
               <select
                 id="services"
@@ -202,7 +202,7 @@ const Contact = () => {
             </div>
 
             <div className="form-group">
-              <label htmlFor="message">Message</label>
+              <label htmlFor="message">Your Message</label>
               <textarea
                 id="message"
                 name="message"
@@ -215,7 +215,7 @@ const Contact = () => {
 
             <div className="form-group">
               <button type="submit" className="send-message-btn" disabled={isSubmitting}>
-                <i className="fas fa-paper-plane"></i> {isSubmitting ? 'Sending...' : 'Send Message'}
+                <i className="fas fa-paper-plane"></i> {isSubmitting ? 'Submitting...' : 'Submit Message'}
               </button>
               {submitStatus && <p className="submit-status">{submitStatus}</p>}
             </div>

@@ -30,69 +30,69 @@ const WhyChooseUs = () => {
   const leftFeatures = [
     {
       id: 1,
-      text: "Comprehensive support with dedicated account managers & teams, proactive reporting"
+      text: "Full support with assigned account managers & teams, plus proactive updates"
     },
     {
       id: 2,
-      text: "Our coders are experts in complete code capture"
+      text: "Our coders excel in capturing all codes accurately"
     },
     {
       id: 3,
-      text: "Experienced AAPC and AHIMA certified coders undertake projects to ensure coding accuracy with continuous training and mentoring programs at all levels"
+      text: "Skilled AAPC and AHIMA certified coders manage projects, ensuring precision with ongoing training and mentorship at every level"
     },
     {
       id: 4,
-      text: "E-Health Care is ISO certified for Information Security Management and are HIPAA compliant"
+      text: "E-Health Care holds ISO certification for Information Security Management and complies with HIPAA"
     },
     {
       id: 5,
-      text: "24/7 × 365 availability, strong business continuity plans and world-class infrastructure"
+      text: "Round-the-clock availability, robust contingency plans, and top-tier infrastructure"
     },
     {
       id: 6,
-      text: "Agile practices and ability to scale up based on client requirements"
+      text: "Flexible practices and capacity to expand based on client needs"
     },
     {
       id: 7,
-      text: "Ability to undertake swift transitions on short notice as we are familiar with the various Health plan guidelines. We can thus work immediately without the required intensive training."
+      text: "Quick transitions on short notice due to familiarity with various Health plan guidelines, enabling immediate work without extensive training"
     }
   ];
 
   const rightFeatures = [
     {
       id: 1,
-      text: "Ability to cater to a wide range of clientele including hospitals, physician offices, Independent Practice Associations, and a variety of other healthcare providers & payers."
+      text: "Serving diverse clients like hospitals, physician offices, Independent Practice Associations, and numerous healthcare providers & payers"
     },
     {
       id: 2,
-      text: "Assured adherence to all regulatory, customer and special guidelines"
+      text: "Guaranteed compliance with all regulatory, client, and specific guidelines"
     },
     {
       id: 3,
-      text: "Nimble and well-trained teams – We can switch our teams to any kind of Risk adjustment coding. Our coders are experts in CMS- HHS -HCC and Complete code (ICD 10) capture."
+      text: "Adaptable, trained teams capable of any Risk adjustment coding, with expertise in CMS-HHS-HCC and full ICD-10 code capture"
     },
     {
       id: 4,
-      text: "Punctual delivery of services and quick turnaround without any compromise on quality"
+      text: "Timely service delivery with fast turnarounds, maintaining high quality"
     },
     {
       id: 5,
-      text: "World class services and economical pricing to offer an excellent value proposition."
+      text: "Premium services at competitive prices for exceptional value"
     },
     {
       id: 6,
-      text: "Adherence to stringent quality metrics to ensure appropriate coding practices and prevent revenue loss."
+      text: "Strict adherence to quality standards to ensure proper coding and avoid revenue loss"
     },
     {
       id: 7,
-      text: "Ability to increase reimbursements based on RAF calculations"
+      text: "Expertise in boosting reimbursements through RAF calculations"
     }
   ];
 
   return (
     <section className="why-choose-us" id="why" ref={sectionRef}>
       <div className="container">
-        <h2 className="section-title">WHY E-HEALTH CARE?</h2>
+        <h2 className="section-title">WHY CHOOSE E-HEALTH CARE?</h2>
         <div className="features-container">
           <div className="features-column left-features">
             {leftFeatures.map((feature, index) => (
@@ -124,7 +124,7 @@ const WhyChooseUs = () => {
           </div>
         </div>
         <div className="button-container">
-          <a href="#contact" className="learn-more-btn">Learn More</a>
+          <a href="#contact" className="learn-more-btn">Find Out More</a>
         </div>
       </div>
     </section>

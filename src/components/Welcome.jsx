@@ -20,13 +20,13 @@ const Welcome = () => {
     <section className={`welcome-section ${imageLoaded ? "image-loaded" : ""}`}>
       <div className="welcome-container">
         <div className={`welcome-content ${contentVisible ? "content-visible" : ""}`}>
-          <h1 className={`welcome-heading ${headingVisible ? "element-visible" : ""}`}>
-            A STRATEGIC PARTNER <br />IN RISK ADJUSTMENT EXCELLENCE
+        <h1 className={`welcome-heading ${headingVisible ? "element-visible" : ""}`}>
+            YOUR TRUSTED ALLY <br />IN RISK ADJUSTMENT MASTERY
           </h1>
           <div className={`welcome-taglines ${taglinesVisible ? "element-visible" : ""}`}>
-            <p>Our performance ensures your success.</p>
-            <p>Our innovation transforms industry standards.</p>
-            <p>Our expertise stands unrivaled. We maximize your outcomes.</p>
+            <p>We drive your success with unmatched precision.</p>
+            <p>We redefine standards with forward-thinking solutions.</p>
+            <p>Our expertise is your edge — we unlock your full potential.</p>
           </div>
           <a
             href="#services"

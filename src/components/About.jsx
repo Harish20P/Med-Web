@@ -1,13 +1,13 @@
 import React, { useState, useEffect, useRef } from 'react';
-import "./About.css"
-import reduction from "../assets/reduction.png"
-import reductionHover from "../assets/reduction1.png" 
-import consistency from "../assets/consistency1.png"
-import consistencyHover from "../assets/consistency.png" 
-import project from "../assets/project.png"
-import projectHover from "../assets/project (1).png" 
-import stock from "../assets/ready-stock.png"
-import stockHover from "../assets/ready-stock (1).png" 
+import "./About.css";
+import reduction from "../assets/reduction.png";
+import reductionHover from "../assets/reduction1.png";
+import consistency from "../assets/consistency1.png";
+import consistencyHover from "../assets/consistency.png";
+import project from "../assets/project.png";
+import projectHover from "../assets/project (1).png";
+import stock from "../assets/ready-stock.png";
+import stockHover from "../assets/ready-stock (1).png";
 
 const AboutUs = () => {
   const [counters, setCounters] = useState({
@@ -123,20 +123,20 @@ const AboutUs = () => {
     <div className="about-us-container" id="about" ref={sectionRef}>
       <div className="about-us-content">
         <div className={`about-header ${headerVisible ? 'slide-in-left' : 'hidden-left'}`}>
-          <h3>E-HEALTH CARE AT GLANCE</h3>
-          <h2>Let us do the work, so you can focus <br /> on what matters.</h2>
+          <h3>E-HEALTH CARE OVERVIEW</h3>
+          <h2>We handle the details, so you can prioritize <br /> what’s important.</h2>
         </div>
         
         <div className={`about-description-container ${descriptionVisible ? 'slide-in-left' : 'hidden-left'}`}>
           <div className="about-description-column">
             <p>
-              With strong focus on ethics, data security and transparency, we drive operational excellence and continual improvement plans. Headquartered with a wealth of offerings, we are a progressive company that can easily bridge any offshore gaps in a globalized world.
+              Emphasizing integrity, data protection, and openness, we strive for operational superiority and ongoing enhancement strategies. Based at our headquarters with a broad range of services, we are an innovative firm adept at closing offshore divides in today’s interconnected world.
             </p>
           </div>
           
           <div className="about-description-column">
             <p>
-              Our highly skilled AAPC and AHIMA certified coders are experienced and empowered to perform at their optimum best. Robust and well-designed training programs ensure that they are always up to date with the latest developments and requirements. Such programs and our forward-thinking approach, give us the agility to scale up easily. Customers are thus assured of absolute peace of mind when they engage with us.
+              Our proficient coders, certified by AAPC and AHIMA, are well-trained and motivated to excel consistently. Through comprehensive and thoughtfully crafted training initiatives, they stay current with industry advancements and standards. These efforts, combined with our proactive mindset, enable us to scale operations effortlessly, ensuring clients experience complete confidence when partnering with us.
             </p>
           </div>
         </div>
@@ -151,11 +151,11 @@ const AboutUs = () => {
           >
             <img 
               src={hoverStates.cost ? reductionHover : reduction} 
-              alt="Cost Reduction" 
+              alt="Expense Savings" 
             />
           </div>
           <div className="counter-value">{counters.cost}%</div>
-          <div className="counter-label">Cost Reduction</div>
+          <div className="counter-label">Expense Savings</div>
         </div>
         
         <div className={`counter-item ${counterVisible[1] ? 'fade-in' : 'hidden-fade'}`}>
@@ -166,11 +166,11 @@ const AboutUs = () => {
           >
             <img 
               src={hoverStates.consistency ? consistencyHover : consistency} 
-              alt="Accuracy" 
+              alt="Precision" 
             />
           </div>
           <div className="counter-value">{counters.consistency}%</div>
-          <div className="counter-label">Consistency in Accuracy</div>
+          <div className="counter-label">Precision Consistency</div>
         </div>
         
         <div className={`counter-item ${counterVisible[2] ? 'fade-in' : 'hidden-fade'}`}>
@@ -181,11 +181,11 @@ const AboutUs = () => {
           >
             <img 
               src={hoverStates.meeting ? projectHover : project} 
-              alt="Timelines" 
+              alt="Deadlines" 
             />
           </div>
           <div className="counter-value">{counters.meeting}%</div>
-          <div className="counter-label">Meeting the Timelines</div>
+          <div className="counter-label">Adhering to Deadlines</div>
         </div>
         
         <div className={`counter-item ${counterVisible[3] ? 'fade-in' : 'hidden-fade'}`}>
@@ -196,11 +196,11 @@ const AboutUs = () => {
           >
             <img 
               src={hoverStates.availability ? stockHover : stock} 
-              alt="Availability" 
+              alt="Accessibility" 
             />
           </div>
           <div className="counter-value">{counters.availability}%</div>
-          <div className="counter-label">24/7 Availability</div>
+          <div className="counter-label">Round-the-Clock Accessibility</div>
         </div>
       </div>
     </div>

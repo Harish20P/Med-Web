@@ -70,10 +70,7 @@ const OurServices = () => {
   };
 
   useEffect(() => {
-    // Create an observer for each section
     const observers = {};
-    
-    // Helper function to create observers for specific sections
     const createObserver = (sectionName) => {
       return new IntersectionObserver(
         (entries) => {
@@ -86,7 +83,6 @@ const OurServices = () => {
       );
     };
     
-    // Create and attach observers for each section
     Object.keys(sectionRefs).forEach(sectionName => {
       if (sectionRefs[sectionName].current) {
         observers[sectionName] = createObserver(sectionName);
@@ -94,7 +90,6 @@ const OurServices = () => {
       }
     });
     
-    // Cleanup
     return () => {
       Object.values(observers).forEach(observer => observer.disconnect());
     };
@@ -106,8 +101,8 @@ const OurServices = () => {
         className={`services-header ${visibleSections.header ? 'fade-in' : 'hidden'}`}
         ref={sectionRefs.header}
       >
-        <h3>WHAT WE OFFER</h3>
-        <h1>IMPROVED FINANCIAL PERFORMANCE</h1>
+        <h3>OUR OFFERINGS</h3>
+        <h1>BOOSTED FINANCIAL RESULTS</h1>
       </div>
 
       <div className="services-content">
@@ -126,9 +121,7 @@ const OurServices = () => {
                   onMouseLeave={() => handleMouseLeave('riskIcon1')}
                 />
               </div>
-              <div className="service-arrow">
-                <span>→</span>
-              </div>
+              <div className="service-arrow">→</div>
               <div className="service-icon">
                 <img
                   src={hoveredIcons.riskIcon2 ? riskIcon2Hover : riskIcon2}
@@ -137,9 +130,7 @@ const OurServices = () => {
                   onMouseLeave={() => handleMouseLeave('riskIcon2')}
                 />
               </div>
-              <div className="service-arrow">
-                <span>→</span>
-              </div>
+              <div className="service-arrow">→</div>
               <div className="service-icon">
                 <img
                   src={hoveredIcons.riskIcon3 ? riskIcon3Hover : riskIcon3}
@@ -153,10 +144,10 @@ const OurServices = () => {
           <div className="service-text slide-from-right" id="risk-adjustment">
             <h2>RISK ADJUSTMENT CODING</h2>
             <p>
-              We carry end-to-end expertise in risk adjustment coding and are specialists in the same. Our actions bring total transparency to operations and provide detailed reporting and visibility. E-Health Care offers world-class coding services and has some of the best resources in the industry.
+              We specialize in risk adjustment coding, ensuring transparency and detailed reporting. E-Health Care provides top-tier coding services with expert resources.
             </p>
             <p>
-              Additionally, we are capable of undertaking risk-adjustment audits, including chart reviews, audits of medical records etc. We work closely with customers to understand the requirements in detail, come up with proactive suggestions and create personalized risk adjustment HCC coding solutions.
+              We handle risk-adjustment audits like chart and medical record reviews, collaborating with clients to deliver tailored HCC coding solutions.
             </p>
           </div>
         </div>
@@ -169,10 +160,10 @@ const OurServices = () => {
           <div className="service-text slide-from-left" id="hedis">
             <h2>HEDIS ABSTRACTION</h2>
             <p>
-              E-Health Care brings unmatched expertise to HEDIS support, and our personnel can abstract, analyze and report accurately on all HEDIS measures as per the relevant NCQA technical specifications. We can thus enhance the quality and star ratings for customers and deliver value to clients. Our HEDIS abstractors have expertise in all measures and a strong background in clinical knowledge.
+              E-Health Care excels in HEDIS support, accurately analyzing and reporting per NCQA specs to boost quality and star ratings with skilled abstractors.
             </p>
             <p>
-              By close monitoring and closing of real-time gaps, we ensure high compliance and improvement in the effectiveness of interventions and clinical care.
+              We monitor and address real-time gaps, enhancing compliance and clinical care effectiveness.
             </p>
           </div>
           <div className="service-icon-column slide-from-right">
@@ -185,9 +176,7 @@ const OurServices = () => {
                   onMouseLeave={() => handleMouseLeave('hedisIcon1')}
                 />
               </div>
-              <div className="service-arrow">
-                <span>→</span>
-              </div>
+              <div className="service-arrow">→</div>
               <div className="service-icon">
                 <img
                   src={hoveredIcons.hedisIcon2 ? hedisIcon2Hover : hedisIcon2}
@@ -196,9 +185,7 @@ const OurServices = () => {
                   onMouseLeave={() => handleMouseLeave('hedisIcon2')}
                 />
               </div>
-              <div className="service-arrow">
-                <span>→</span>
-              </div>
+              <div className="service-arrow">→</div>
               <div className="service-icon">
                 <img
                   src={hoveredIcons.hedisIcon3 ? hedisIcon3Hover : hedisIcon3}
@@ -226,9 +213,7 @@ const OurServices = () => {
                   onMouseLeave={() => handleMouseLeave('qualityIcon1')}
                 />
               </div>
-              <div className="service-arrow">
-                <span>→</span>
-              </div>
+              <div className="service-arrow">→</div>
               <div className="service-icon">
                 <img
                   src={hoveredIcons.qualityIcon2 ? qualityIcon2Hover : qualityIcon2}
@@ -237,9 +222,7 @@ const OurServices = () => {
                   onMouseLeave={() => handleMouseLeave('qualityIcon2')}
                 />
               </div>
-              <div className="service-arrow">
-                <span>→</span>
-              </div>
+              <div className="service-arrow">→</div>
               <div className="service-icon">
                 <img
                   src={hoveredIcons.qualityIcon3 ? qualityIcon3Hover : qualityIcon3}
@@ -253,7 +236,7 @@ const OurServices = () => {
           <div className="service-text slide-from-right" id="quality-review">
             <h2>EXTERNAL QUALITY REVIEW</h2>
             <p>
-              E-Health Care conducts external quality review activities that help determine the missed opportunities. We also risk recommendations regarding the correct codes to submit for better risk scores. We undertake this activity by adhering to the documentation and Medicare guidelines as appropriate.
+              E-Health Care performs quality reviews to identify missed opportunities and recommend codes for better risk scores, following Medicare guidelines.
             </p>
           </div>
         </div>
@@ -266,7 +249,7 @@ const OurServices = () => {
           <div className="service-text slide-from-left" id="radv">
             <h2>RADV AUDIT SERVICES</h2>
             <p>
-              Our RADV audit services offer key insights and help prepare for the RADV audits. We can assist with the review of medical records submitted with high volumes and also check whether the right ICD 10 codes are assigned. With tight deadlines, we empower customers and prime them for success.
+              Our RADV audit services provide insights and prep for audits, reviewing high-volume records and verifying ICD-10 codes under tight deadlines.
             </p>
           </div>
           <div className="service-icon-column slide-from-right">
@@ -279,9 +262,7 @@ const OurServices = () => {
                   onMouseLeave={() => handleMouseLeave('radvIcon1')}
                 />
               </div>
-              <div className="service-arrow">
-                <span>→</span>
-              </div>
+              <div className="service-arrow">→</div>
               <div className="service-icon">
                 <img
                   src={hoveredIcons.radvIcon2 ? radvIcon2Hover : radvIcon2}
@@ -290,9 +271,7 @@ const OurServices = () => {
                   onMouseLeave={() => handleMouseLeave('radvIcon2')}
                 />
               </div>
-              <div className="service-arrow">
-                <span>→</span>
-              </div>
+              <div className="service-arrow">→</div>
               <div className="service-icon">
                 <img
                   src={hoveredIcons.radvIcon3 ? radvIcon3Hover : radvIcon3}

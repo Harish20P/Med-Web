@@ -84,38 +84,32 @@ const Intro = () => {
             className={`intro-header ${contentVisible.header ? 'visible' : ''}`}
             style={{ transitionDelay: '2.1s' }}
           >
-            WHO WE ARE
+            ABOUT US
           </div>
           <h1 
             className={`intro-title ${contentVisible.title ? 'visible' : ''}`}
             style={{ transitionDelay: '2.3s' }}
           >
-            A Reliable Partner for Your Coding Needs
+            Your Trusted Ally in Coding Solutions
           </h1>
           <p 
             className={`intro-paragraph ${contentVisible.paragraph1 ? 'visible' : ''}`}
             style={{ transitionDelay: '2.4s' }}
           >
-            E-Health Care is a dynamic organization of professionals delivering superlative services and powerful transformations in medical coding for
-            the healthcare industry. Specializing in Risk Adjustment coding, we deliver holistic solutions that embody quality, security and excellence
-            at every touchpoint.
+            E-Health Care is a vibrant team of experts providing exceptional services and transformative results in medical coding for the healthcare sector. With a focus on Risk Adjustment coding, we offer comprehensive solutions that prioritize quality, security, and excellence at every step.
           </p>
           <p 
             className={`intro-paragraph ${contentVisible.paragraph2 ? 'visible' : ''}`}
             style={{ transitionDelay: '2.6s' }}
           >
-            Perceptive and perseverant, we bring a consultative approach to understand the complete needs of our clients and deliver tailor-made
-            solutions that are comprehensive, precise and legally compliant in all aspects. Combining deep expertise and domain knowledge with
-            impressive innovations, we help clients unlock value. Be it Retrospective, HEDIS – (Hybrid / Supplemental), Concurrent, RADV for
-            Medicare, Medicaid, and Commercial Insurance, we have the experts and expertise to undertake transitions and launch operations of any
-            scale successfully.
+            Insightful and determined, we adopt a collaborative approach to fully grasp our clients' needs and provide customized solutions that are thorough, accurate, and fully compliant with regulations. Leveraging extensive experience and industry expertise alongside cutting-edge innovations, we enable clients to maximize value. Whether it’s Retrospective, HEDIS (Hybrid/Supplemental), Concurrent, or RADV services for Medicare, Medicaid, and Commercial Insurance, our skilled professionals are equipped to manage transitions and execute operations of any magnitude with success.
           </p>
           <a 
             href="#services"
             className={`intro-button ${contentVisible.button ? 'visible' : ''}`}
             style={{ transitionDelay: '2.8s' }}
           >
-            Learn more
+            Discover More
           </a>
         </div>
       </div>
